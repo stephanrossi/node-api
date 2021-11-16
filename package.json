@@ -5,22 +5,32 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "nodemon -e ts,json src/server.ts"
+    "dev": "nodemon -e ts,json src/server.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
+    "eslint": "^8.2.0",
     "express": "^4.17.1",
+    "nodemon": "^2.0.15",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4",
     "sequelize": "^6.6.5",
+    "ts-node": "^10.4.0",
     "validator": "^13.6.0"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.1",
+    "@types/cors": "^2.8.12",
     "@types/express": "^4.17.13",
     "@types/node": "^16.6.1",
     "@types/sequelize": "^4.28.10",
-    "@types/validator": "^13.6.3"
+    "@types/validator": "^13.6.3",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "typescript": "^4.4.4"
   }
 }
