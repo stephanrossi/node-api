@@ -1,4 +1,4 @@
-import { RequestHandler } from "express"
+import { Request, Response, RequestHandler } from "express"
 
 import { Phrase } from "../models/Phrase"
 
@@ -23,4 +23,19 @@ export const name: RequestHandler = (req, res) => {
     error: false,
     name,
   })
+}
+
+export const createPhrase = async (req: Request, res: Response) => {
+  const { author, text } = req.body
+
+  await Phrase.create({ author, text })
+    .then((data) => {
+      res.status(200).json({
+        error: false,
+        data,
+      })
+    })
+    .catch((error) => {
+      console.log(error)
+    })
 }
