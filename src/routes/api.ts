@@ -9,5 +9,12 @@ router.get("/random", apiController.random)
 
 router.get("/name/:name", apiController.name)
 
+router.get("/frase/random", apiController.randomPhrase)
+router.get("/frase/:id", apiController.getPhrase)
+router.get("/frases", apiController.listPhrases)
 
-router.post('/frases', apiController.createPhrase)
+router.put("/frase/:id", apiController.updatePhrase)
+
+router.post("/frases", apiController.createPhrase)
+
+router.delete("/frase/:id", apiController.deletePhrase)
